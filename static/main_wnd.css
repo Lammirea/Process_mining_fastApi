@@ -1,0 +1,156 @@
+html,body{
+	margin:0;
+	padding:0;
+	outline:none;
+	background-color: #FFFFFF;
+	font-family:"Work Sans";
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box; 
+	scroll-behavior: smooth;
+	display: flexbox;
+}
+
+.menu{
+	padding: 0;
+	top: 0;
+	margin: 0;
+	padding: auto;
+	background: linear-gradient(-45deg, #efd5ff 0%, #515ada 100%);
+	width: calc(100% - 70vw);
+	height: 100vh;
+}
+
+.AlphaMiner{
+	cursor: pointer;
+	text-decoration: none;
+}
+.headerMenu{
+	font-weight: "bold";
+	color: #FFFFFF;
+	font-size: 32pt;
+	text-align: center;
+}
+
+.PD, .CH{
+	font-weight: "bold";
+	font-size: 24pt;
+	color: #FFFFFF;
+	padding-bottom: 6px;
+}
+
+ul {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li { 
+  padding-left: 16px;
+  font-size: 24pt;
+  font-weight: normal;
+  color: #FFFFFF; /* Or a color you prefer */ 
+}
+
+li::before {
+  content: "|"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: #FFFFFF; /* Or a color you prefer */
+}
+
+/* The Modal (background) */
+.show_model {
+	cursor:pointer;
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	background-color: #ffffff;
+	margin: auto;
+	padding: 20px;
+	border: 3px solid #515ADA;
+	color: #515ADA;
+	width: 80%;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 24px;
+	font-weight: normal;
+  }
+  
+ /*стиль кнопки модального окна*/
+  .input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file-btn {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 24px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #515ADA;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + .input-file-btn {
+	box-shadow: 0 0 0 0.2rem rgba(81, 90, 218,.25);
+}
+ 
+/* Hover/active */
+.input-file:hover .input-file-btn {
+	background-color: rgb(81, 90, 218);
+}
+.input-file:active .input-file-btn {
+	background-color: #464eba;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + .input-file-btn {
+	background-color: #eee;
+}
+ 
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }

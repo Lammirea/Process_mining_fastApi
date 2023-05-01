@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% block head %}
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="main_wnd.css">
-    <title>PmTool</title>
+    <link rel="stylesheet"  href="{{ url_for('static', path='/main_wnd.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} PmTool</title>
+    {% endblock %}
 </head>
 <body>
+    {% block page_content %}
+
 <div class="menu">
     <h1 class="headerMenu">PmTool</h1>
     <div class="ProcessMining_menu">
         <h2 class="PD">Process Discovery</h2>
         <ul class="ProcessMining_list">
             <li>
-                <a id="modelAlpha">Alpha Miner</a>
+                <a id="modelAlpha" class="AlphaMiner">Alpha Miner</a>
             </li>
             <li>
                 <a id="modelInductive">Inductive Miner</a>
@@ -29,13 +34,26 @@
         </ul>
     </div>
 </div>
-<div class="show_model">
-    
+<div id="modalAlpha" class="show_model">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <label class="input-file">
+                <p class="ChooseLog">Выберите журнал событий</p>
+                <input type="file" id="logRight" name="logRight" accept=".xes">
+                <span class="input-file-btn">Выберите файл</span>
+                <p class="ChooseChangedLog">Выберите изменённый журнал событий</p>
+                <input type="file" id="LogChanged" name="LogChanged" accept=".xes">
+                <span class="input-file-btn">Выберите файл</span>
+            </label>         
+        </div>
 </div>
+{% endblock %}
 
+{% block scripts %}
 <script>
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("modalAlpha");
     
     // Get the button that opens the modal
     var btn = document.getElementById("modelAlpha");
@@ -60,5 +78,6 @@
       }
     }
     </script>
+{% endblock %}
 </body>
 </html>
