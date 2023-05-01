@@ -1,0 +1,55 @@
+html,body{
+	margin:0;
+	padding:0;
+	outline:none;
+	background-color: #FFFFFF;
+	font-family:"Work Sans";
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box; 
+	scroll-behavior: smooth;
+	display: flexbox;
+}
+
+.menu{
+	padding: 0;
+	top: 0;
+	margin: 0;
+	padding: auto;
+	background: linear-gradient(-45deg, #efd5ff 0%, #515ada 100%);
+	width: calc(100% - 70vw);
+	height: 100vh;
+}
+
+.headerMenu{
+	font-weight: "bold";
+	color: #FFFFFF;
+	font-size: 32pt;
+	text-align: center;
+}
+
+.PD, .CH{
+	font-weight: "bold";
+	font-size: 24pt;
+	color: #FFFFFF;
+	padding-bottom: 6px;
+}
+
+ul {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li { 
+  padding-left: 16px;
+  font-size: 24pt;
+  font-weight: normal;
+  color: #FFFFFF; /* Or a color you prefer */ 
+}
+
+li::before {
+  content: "|"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: #FFFFFF; /* Or a color you prefer */
+}
