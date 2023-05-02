@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import json
-from alphaMiner import *
+from app.minersFuncs import alpha_model
 
 app = FastAPI()
 

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- {% block head %} -->
+    {% block head %}
     <meta charset="utf-8"/>
-    <!-- <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="main_wnd.css" >
+    <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet">
+    <!--<link rel="stylesheet" href="main_wnd.css" >-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><!--{% block title %}{% endblock %}--> PmTool</title>
-    <!-- {% endblock %} -->
+    <title>{% block title %}{% endblock %} PmTool</title>
+    {% endblock %}
 </head>
 <body>
-    <!-- {% block page_content %} -->
+    {% block page_content %}
 <div class="menu">
     <h1 class="headerMenu">PmTool</h1>
     <div class="ProcessMining_menu">
@@ -50,13 +50,13 @@
 </div>
 <div class="show_model">
     <div class="picture_of_model">
-        <!--{{model}}--> 
+        {{model}} 
     </div>
     <button>Создать модель</button>
 </div>
-<!-- {% endblock %}
+{% endblock %}
 
-{% block scripts %} -->
+{% block scripts %}
 <script>
     // Get the modal
     var modal = document.getElementById("modalAlpha");
@@ -106,6 +106,6 @@
 };
 
     </script>
-<!-- {% endblock %} -->
+{% endblock %}
 </body>
 </html>

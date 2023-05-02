@@ -4,12 +4,10 @@ html,body{
 	outline:none;
 	background-color: #FFFFFF;
 	font-family:"Work Sans";
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box; 
+	box-sizing:content-box; 
 	scroll-behavior: smooth;
 	display: inline-block;
-	border: 3px green;
+	width: 100%;
 }
 
 .menu{
@@ -22,6 +20,7 @@ html,body{
 	width: calc(100% - 70vw);
 	height: 100vh;
 	position: absolute;
+	left: 0;
 }
 
 .AlphaMiner{
@@ -159,30 +158,28 @@ li::before {
   }
 
   .show_model{
-	padding: 0;
-	top: 0;
-	margin: 0;
-	padding: auto;
-	width:calc(100%-30vw);
+	position: absolute;
+	display: inline-block;
+	top: 0; 
+	right: 0;
+	width:70vw;
 	height: 100vh;
 	background-color: #ffffff;
-	position: relative;
   }
 
   .picture_of_model{
-	width: calc(100%-30vw);
+	width: 50vw;
 	height: 70vh;
 	background-color: #515ADA;
 	border: 3px #515ADA;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	position: relative;
+	position: absolute;
+  	top: 30%;
+  	left: 50%;
+  	transform: translate(-50%, -30%);
   }
 
   button{
-	position: relative;
-	display: inline-block;
+	position: absolute;
 	cursor: pointer;
 	outline: none;
 	text-decoration: none;
@@ -197,5 +194,7 @@ li::before {
 	padding: 10px 20px;
 	box-sizing: border-box;
 	border: none;
-	margin: 0;
+	top:90%;
+	left: 50%;
+	transform: translate(-50%,-90%);
   }
