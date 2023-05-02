@@ -3,66 +3,49 @@
 <head>
     {% block head %}
     <meta charset="utf-8"/>
-    <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet">
-    <!--<link rel="stylesheet" href="main_wnd.css" >-->
+    <!-- <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="main_wnd.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{% endblock %} PmTool</title>
-    {% endblock %}
+    <title><!--{% block title %}{% endblock %}--> PmTool</title>
+    <!-- {% endblock %} -->
 </head>
 <body>
-    {% block page_content %}
+    <!-- {% block page_content %} -->
 <div class="menu">
     <h1 class="headerMenu">PmTool</h1>
     <div class="ProcessMining_menu">
         <h2 class="PD">Process Discovery</h2>
-        <ul class="ProcessMining_list">
-            <li>
-                <a id="modelAlpha" class="AlphaMiner">Alpha Miner</a>
-            </li>
-            <li>
-                <a id="modelInductive">Inductive Miner</a>
-            </li>
-            <li>
-                <a id="modelHeuristic">Heuristic Miner</a>
-            </li>
-        </ul>
+        <label class="input-file">
+            <input type="file" id="logRight" name="logRight" accept=".xes" onchange='openFile(event)'>
+            <span class="input-file-btn">Выберите файл</span>
+        </label>     
     </div>
     <div class="ConforChecking_menu">
         <h2 class="CH">Conformance Checking</h2>
-        <ul class="ConforChecking_list">
-            <li>Token-based replay</li>
-        </ul>
+        <label class="input-file">
+            <input type="file" id="logConfromance" name="logConfromance" accept=".xes" onchange='openFile(event)'>
+            <span class="input-file-btn">Выберите файл</span>
+        </label>  
     </div>
-</div>
-<div id="modalAlpha" class="show_modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <label class="input-file">
-                <p class="ChooseLog">Выберите журнал событий</p>
-                <input type="file" id="logRight" name="logRight" accept=".xes" onchange='openFile(event)'>
-                <span class="input-file-btn">Выберите файл</span>
-                <p class="ChooseChangedLog">Выберите изменённый журнал событий</p>
-                <input type="file" id="LogChanged" name="LogChanged" accept=".xes" onchange='openFile(event)'>
-                <span class="input-file-btn">Выберите файл</span>
-            </label>         
-        </div>
 </div>
 <div class="show_model">
     <div class="picture_of_model">
-        {{model}} 
+        <img id="imageOfModel" src="data:image/png;base64,{{ PetriNet | safe }}" alt="AlphaMinerModel">
     </div>
-    <button>Создать модель</button>
+    <form method="post" action="/createModel"  enctype="application/x-www-form-urlencoded">
+        <button id = "createmodel" value="Upvote">Создать модель</button>
+    </form>
 </div>
-{% endblock %}
+<!-- {% endblock %} -->
 
-{% block scripts %}
+<!-- {% block scripts %} -->
 <script>
     // Get the modal
     var modal = document.getElementById("modalAlpha");
     
     // Get the button that opens the modal
     var btn = document.getElementById("modelAlpha");
+    var createbtn = document.getElementById("createmodel");
     
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -84,6 +67,11 @@
       }
     }
 
+    createbtn.onclick=function(){
+        document.getElementById('imageOfModel')
+                .style.display = "block";
+    }
+
     var openFile = function(event) {
     var input = event.target;
 
@@ -103,9 +91,9 @@
             type:"POST",
             contentType: "application/json",
             data: JSON.stringify(s)});
-};
+    };
 
     </script>
-{% endblock %}
+<!-- {% endblock %} -->
 </body>
 </html>
