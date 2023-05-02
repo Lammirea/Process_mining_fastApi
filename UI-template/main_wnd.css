@@ -8,10 +8,12 @@ html,body{
 	-moz-box-sizing:border-box;
 	box-sizing:border-box; 
 	scroll-behavior: smooth;
-	display: flexbox;
+	display: inline-block;
+	border: 3px green;
 }
 
 .menu{
+	border: 2px red;
 	padding: 0;
 	top: 0;
 	margin: 0;
@@ -19,6 +21,7 @@ html,body{
 	background: linear-gradient(-45deg, #efd5ff 0%, #515ada 100%);
 	width: calc(100% - 70vw);
 	height: 100vh;
+	position: absolute;
 }
 
 .AlphaMiner{
@@ -59,7 +62,7 @@ li::before {
 }
 
 /* The Modal (background) */
-.show_model {
+.show_modal {
 	cursor:pointer;
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
@@ -153,4 +156,46 @@ li::before {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
+  }
+
+  .show_model{
+	padding: 0;
+	top: 0;
+	margin: 0;
+	padding: auto;
+	width:calc(100%-30vw);
+	height: 100vh;
+	background-color: #ffffff;
+	position: relative;
+  }
+
+  .picture_of_model{
+	width: calc(100%-30vw);
+	height: 70vh;
+	background-color: #515ADA;
+	border: 3px #515ADA;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	position: relative;
+  }
+
+  button{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 24px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #515ADA;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
   }

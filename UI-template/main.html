@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% block head %}
+    <!-- {% block head %} -->
     <meta charset="utf-8"/>
-    <link rel="stylesheet"  href="{{ url_for('static', path='/main_wnd.css') }}">
+    <!-- <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="main_wnd.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{% endblock %} PmTool</title>
-    {% endblock %}
+    <title><!--{% block title %}{% endblock %}--> PmTool</title>
+    <!-- {% endblock %} -->
 </head>
 <body>
-    {% block page_content %}
-
+    <!-- {% block page_content %} -->
 <div class="menu">
     <h1 class="headerMenu">PmTool</h1>
     <div class="ProcessMining_menu">
@@ -34,23 +34,29 @@
         </ul>
     </div>
 </div>
-<div id="modalAlpha" class="show_model">
+<div id="modalAlpha" class="show_modal">
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
             <label class="input-file">
                 <p class="ChooseLog">Выберите журнал событий</p>
-                <input type="file" id="logRight" name="logRight" accept=".xes">
+                <input type="file" id="logRight" name="logRight" accept=".xes" onchange='openFile(event)'>
                 <span class="input-file-btn">Выберите файл</span>
                 <p class="ChooseChangedLog">Выберите изменённый журнал событий</p>
-                <input type="file" id="LogChanged" name="LogChanged" accept=".xes">
+                <input type="file" id="LogChanged" name="LogChanged" accept=".xes" onchange='openFile(event)'>
                 <span class="input-file-btn">Выберите файл</span>
             </label>         
         </div>
 </div>
-{% endblock %}
+<div class="show_model">
+    <div class="picture_of_model">
+        <!--{{model}}--> 
+    </div>
+    <button>Создать модель</button>
+</div>
+<!-- {% endblock %}
 
-{% block scripts %}
+{% block scripts %} -->
 <script>
     // Get the modal
     var modal = document.getElementById("modalAlpha");
@@ -77,7 +83,29 @@
         modal.style.display = "none";
       }
     }
+
+    var openFile = function(event) {
+    var input = event.target;
+
+    var reader = new FileReader();
+    reader.onload = function() {
+        var text = reader.result;
+        var node = document.getElementById('logRight');
+        node.innerText = text;
+        //console.log(reader.result.substring(0, 200));
+    };
+    reader.readAsText(input.files[0]);
+    var data = reader.readAsText(input.files[0]);
+    const s = JSON.stringify(reader); // Stringify converts a JavaScript object or value to a JSON string
+    //window.alert(s)
+    $.ajax({
+            url:"/test",
+            type:"POST",
+            contentType: "application/json",
+            data: JSON.stringify(s)});
+};
+
     </script>
-{% endblock %}
+<!-- {% endblock %} -->
 </body>
 </html>
