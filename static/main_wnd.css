@@ -115,30 +115,30 @@ ul {
 	  margin: 0;
 	  transition: background-color 0.2s;
   }
-	input[type=file]{
+  input[type=file]{
 	  position: absolute;
-	  z-index: -1;
-	  opacity: 0;
+	  z-index: 1;
+	  opacity: 1;
 	  display: block;
-	  width: 0;
-	  height: 0;
+	  width: 249px;
+	  height: 48px;
   }
   input[type=submit]{
 	position: absolute;
-	  z-index: -1;
-	  opacity: 0;
+	  z-index: 1;
+	  opacity: 1;
 	  display: block;
-	  width: 0;
-	  height: 0;
+	  width: 249px;
+	  height: 48px;
   }
   
    
-  /* Focus
+  /* Focus */
   .input-file input[type=file]:focus + .input-file-btn {
 	  box-shadow: 0 0 0 0.2rem rgba(81, 90, 218,.25);
   }
    
-  /* Hover/active
+  /* Hover/active*/
   .input-file:hover .input-file-btn {
 	  background-color: rgb(81, 90, 218);
   }
@@ -146,10 +146,10 @@ ul {
 	  background-color: #464eba;
   }
    
-  /* Disabled
+  /* Disabled*/
   .input-file input[type=file]:disabled + .input-file-btn {
 	  background-color: #eee;
-  } */
+  }
    
 	/* The Close Button */
 	.close {
