@@ -1,10 +1,13 @@
-from fastapi import FastAPI, Request
+from fastapi import File, UploadFile, Request, FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-import json
 from app.minersFuncs import alpha_model
 import base64
+import pm4py
+import os
+from PIL import Image
+
 
 app = FastAPI()
 
@@ -15,8 +18,34 @@ templates = Jinja2Templates(directory="UI-template",auto_reload=True)
 async def home(request: Request):
     return templates.TemplateResponse("main.html", {"request": request})
 
-@app.post("/createModel")
-def upload(request: Request):
+@app.post("/submit")
+def upload(request: Request, file: UploadFile = File(...)):
+    os.environ["PATH"] +=os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
+    try:
+        contents = file.file.read()
+      
+    except Exception:
+        return {"message": "There was an error uploading the file"}
+    finally:
+        file.file.close()
+  
     model = alpha_model("app/repairExample.xes")
-    base64_encoded_image = base64.b64encode(model).decode("utf-8")
-    return templates.TemplateResponse("main.html", {"request": request,  "PetriNet":base64_encoded_image})
+    return templates.TemplateResponse("main.html", {"request": request,  "myImage": model})
+
+# @app.get("/")
+# def main(request: Request):
+#     return templates.TemplateResponse("index.html", {"request": request})
+  
+# @app.post("/upload")
+# def upload(request: Request, file: UploadFile = File(...)):
+#     os.environ["PATH"] +=os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
+#     try:
+#         contents = file.file.read()
+        
+#     except Exception:
+#         return {"message": "There was an error uploading the file"}
+#     finally:
+#         file.file.close()
+    
+#     model = alpha_model("app/repairExample.xes")
+#     return templates.TemplateResponse("index.html", {"request": request,  "myImage": model})

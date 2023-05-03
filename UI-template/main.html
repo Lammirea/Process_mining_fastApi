@@ -3,42 +3,56 @@
 <head>
     {% block head %}
     <meta charset="utf-8"/>
-    <!-- <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="main_wnd.css" >
+    <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="main_wnd.css" > -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><!--{% block title %}{% endblock %}--> PmTool</title>
-    <!-- {% endblock %} -->
+    <title>{% block title %}{% endblock %} PmTool</title>
+    {% endblock %}
 </head>
 <body>
-    <!-- {% block page_content %} -->
+    {% block page_content %}
 <div class="menu">
     <h1 class="headerMenu">PmTool</h1>
     <div class="ProcessMining_menu">
         <h2 class="PD">Process Discovery</h2>
-        <label class="input-file">
-            <input type="file" id="logRight" name="logRight" accept=".xes" onchange='openFile(event)'>
-            <span class="input-file-btn">Выберите файл</span>
-        </label>     
+        <ul class="ProcessMining_list">
+            <li>
+                <a id="modelAlpha" class="AlphaMiner">Alpha Miner</a>
+            </li>
+            <li>
+                <a id="modelInductive">Inductive Miner</a>
+            </li>
+            <li>
+                <a id="modelHeuristic">Heuristic Miner</a>
+            </li>
+        </ul>    
     </div>
     <div class="ConforChecking_menu">
         <h2 class="CH">Conformance Checking</h2>
-        <label class="input-file">
-            <input type="file" id="logConfromance" name="logConfromance" accept=".xes" onchange='openFile(event)'>
-            <span class="input-file-btn">Выберите файл</span>
-        </label>  
+        <ul class="ConforChecking_list">
+            <li>Token-based replay</li>
+        </ul>
     </div>
 </div>
 <div class="show_model">
     <div class="picture_of_model">
-        <img id="imageOfModel" src="data:image/png;base64,{{ PetriNet | safe }}" alt="AlphaMinerModel">
+        <p id="showMessage">Модель создана!</p>
     </div>
-    <form method="post" action="/createModel"  enctype="application/x-www-form-urlencoded">
-        <button id = "createmodel" value="Upvote">Создать модель</button>
-    </form>
 </div>
-<!-- {% endblock %} -->
+<div id="modalAlpha" class="show_modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form method="post" action="/upload" enctype="multipart/form-data">
+            <label for="file">Choose image to upload</label>
+            <input type="file" id="files" accept=".xes" name="file"><br> 
+            <input type="submit" value="Upload">
+        </form>         
+    </div>
+</div>
+{% endblock %}
 
-<!-- {% block scripts %} -->
+{% block scripts %}
 <script>
     // Get the modal
     var modal = document.getElementById("modalAlpha");
@@ -67,33 +81,33 @@
       }
     }
 
-    createbtn.onclick=function(){
-        document.getElementById('imageOfModel')
-                .style.display = "block";
-    }
+    // createbtn.onclick=function(){
+    //     document.getElementById('imageOfModel')
+    //             .style.display = "block";
+    // }
 
-    var openFile = function(event) {
-    var input = event.target;
+    // var openFile = function(event) {
+    // var input = event.target;
 
-    var reader = new FileReader();
-    reader.onload = function() {
-        var text = reader.result;
-        var node = document.getElementById('logRight');
-        node.innerText = text;
-        //console.log(reader.result.substring(0, 200));
-    };
-    reader.readAsText(input.files[0]);
-    var data = reader.readAsText(input.files[0]);
-    const s = JSON.stringify(reader); // Stringify converts a JavaScript object or value to a JSON string
-    //window.alert(s)
-    $.ajax({
-            url:"/test",
-            type:"POST",
-            contentType: "application/json",
-            data: JSON.stringify(s)});
-    };
+    // var reader = new FileReader();
+    // reader.onload = function() {
+    //     var text = reader.result;
+    //     var node = document.getElementById('logRight');
+    //     node.innerText = text;
+    //     //console.log(reader.result.substring(0, 200));
+    // };
+    // reader.readAsText(input.files[0]);
+    // var data = reader.readAsText(input.files[0]);
+    // const s = JSON.stringify(reader); // Stringify converts a JavaScript object or value to a JSON string
+    // //window.alert(s)
+    // $.ajax({
+    //         url:"/test",
+    //         type:"POST",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(s)});
+    // };
 
     </script>
-<!-- {% endblock %} -->
+{% endblock %}
 </body>
 </html>
