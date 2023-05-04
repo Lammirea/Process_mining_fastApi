@@ -7,6 +7,7 @@ import base64
 import pm4py
 import os
 from PIL import Image
+from fastapi.responses import FileResponse
 
 
 app = FastAPI()
@@ -49,3 +50,7 @@ def upload(request: Request, file: UploadFile = File(...)):
     
 #     model = alpha_model("app/repairExample.xes")
 #     return templates.TemplateResponse("index.html", {"request": request,  "myImage": model})
+
+@app.get("/file/download")
+def download_file():
+  return FileResponse(path=alpha_model("app/repairExample.xes"), filename='petri_net.png', media_type='multipart/form-data')
