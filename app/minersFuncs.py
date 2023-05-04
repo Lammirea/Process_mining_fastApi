@@ -7,9 +7,16 @@ from pm4py.visualization.petri_net import visualizer as pn_visualizer
 
 def alpha_model(filename):
     os.environ["PATH"] +=os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
-    log = pm4py.read_xes(filename)
-    net, initial_marking, final_marking = alpha_miner.apply(log)
-    gviz = pn_visualizer.apply(net, initial_marking, final_marking)
+    logAlpha = pm4py.read_xes(filename)
+    netAlpha, initial_markingAlpha, final_markingAlpha = alpha_miner.apply(logAlpha)
+    gviz = pn_visualizer.apply(netAlpha, initial_markingAlpha, final_markingAlpha)
     # pn_visualizer.view(gviz)  
     return pn_visualizer.view(gviz)
 
+def inductive_model(filename):
+    os.environ["PATH"] +=os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
+    logInduct = pm4py.read_xes(filename)
+    netInduct, initial_markingInduct, final_markingInduct = alpha_miner.apply(logInduct)
+    gvizInduct = pn_visualizer.apply(netInduct, initial_markingInduct, final_markingInduct)
+    return pn_visualizer.view(gvizInduct)
+    

@@ -2,7 +2,7 @@ from fastapi import File, UploadFile, Request, FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from app.minersFuncs import alpha_model
+from app.minersFuncs import *
 import base64
 import pm4py
 import os
@@ -29,8 +29,7 @@ def upload(request: Request, file: UploadFile = File(...)):
         return {"message": "There was an error uploading the file"}
     finally:
         file.file.close()
-  
-    model = alpha_model("app/repairExample.xes")
+    model = alpha_model(os.path.abspath(__file__))
     return templates.TemplateResponse("main.html", {"request": request,  "myImage": model})
 
 # @app.get("/")
@@ -51,6 +50,15 @@ def upload(request: Request, file: UploadFile = File(...)):
 #     model = alpha_model("app/repairExample.xes")
 #     return templates.TemplateResponse("index.html", {"request": request,  "myImage": model})
 
-@app.get("/file/download")
+@app.get("/file/downloadAlpha")
 def download_file():
-  return FileResponse(path=alpha_model("app/repairExample.xes"), filename='petri_net.png', media_type='multipart/form-data')
+  __file__ = "app/repairExample.xes"
+  return FileResponse(path=alpha_model(os.path.abspath(__file__)), filename='petri_net_alpha.png', media_type='multipart/form-data')
+
+@app.get("/file/downloadInduct")
+def download_file():
+  __file__ = "app/repairExample.xes"
+  return FileResponse(path=inductive_model(os.path.abspath(__file__)), filename='petri_net_induct.png', media_type='multipart/form-data')
+
+
+
