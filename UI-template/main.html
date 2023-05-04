@@ -17,96 +17,62 @@
         <h2 class="PD">Process Discovery</h2>
         <ul class="ProcessMining_list">
             <li>
-                <a id="modelAlpha" class="AlphaMiner">Alpha Miner</a>
+                <a class="AlphaMiner" href="#alpha-model">Alpha Miner</a>
             </li>
             <li>
-                <a id="modelInductive">Inductive Miner</a>
-            </li>
-            <li>
-                <a id="modelHeuristic">Heuristic Miner</a>
+                <a class="modelInductive" href="#inductive-model">Inductive Miner</a>
             </li>
         </ul>    
     </div>
     <div class="ConforChecking_menu">
         <h2 class="CH">Conformance Checking</h2>
         <ul class="ConforChecking_list">
-            <li>Token-based replay</li>
+            <li>
+                <a class="tokenConformance" href="#token-based-model">Token-based replay</a>
+            </li>
         </ul>
     </div>
 </div>
-<div class="show_model">
-    <div class="picture_of_model">
-        <p id="showMessage">Модель создана!</p>
+<div class="Panel">
+    <div class="show_model">
+        <img src="{{ url_for('static', path='/images/Show_Modelbkg.png') }}" alt="main image">
     </div>
-</div>
-<div id="modalAlpha" class="show_modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <form method="post" action="/upload" enctype="multipart/form-data">
-            <label for="file">Choose image to upload</label><br>
-            <input type="file" id="files" accept=".xes" name="file"><br>
-            <label for="upload">Upload</label><br>
-            <input type="submit" value="Upload" name="upload">
-       </form>         
+    <div id="alpha-model">
+        <h2 class="model_hAlpha">Alpha miner</h2>
+        <div class="picture_of_alpha">
+            <form method="get" action="/file/download" enctype="multipart/form-data">
+                <label for="file">Choose log file</label>
+                <input type="file" id="files" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload">Build</button>
+            </form>
+        </div>
+    </div>
+    <div id="inductive-model">
+        <h2 class="model_hInductive">Inductive miner</h2>
+        <div class="picture_of_inductive">
+            <form method="get" action="/file/download" enctype="multipart/form-data">
+                <label for="file">Choose image to upload</label>
+                <input type="file" id="files" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload">Send</button>
+            </form>
+        </div>
+    </div>
+    <div id="token-based-model">
+        <h2 class="model_hToken">Token-based replay</h2>
+        <div class="picture_of_token">
+            <form method="get" action="/file/download" enctype="multipart/form-data">
+                <label for="file">Choose image to upload</label>
+                <input type="file" id="files" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload">Send</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
-<script>
-    // Get the modal
-    var modal = document.getElementById("modalAlpha");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("modelAlpha");
-    var createbtn = document.getElementById("createmodel");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    // createbtn.onclick=function(){
-    //     document.getElementById('imageOfModel')
-    //             .style.display = "block";
-    // }
-
-    // var openFile = function(event) {
-    // var input = event.target;
-
-    // var reader = new FileReader();
-    // reader.onload = function() {
-    //     var text = reader.result;
-    //     var node = document.getElementById('logRight');
-    //     node.innerText = text;
-    //     //console.log(reader.result.substring(0, 200));
-    // };
-    // reader.readAsText(input.files[0]);
-    // var data = reader.readAsText(input.files[0]);
-    // const s = JSON.stringify(reader); // Stringify converts a JavaScript object or value to a JSON string
-    // //window.alert(s)
-    // $.ajax({
-    //         url:"/test",
-    //         type:"POST",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(s)});
-    // };
+    <script>
+   
 
     </script>
 {% endblock %}
