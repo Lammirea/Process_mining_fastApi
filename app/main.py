@@ -3,10 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from app.minersFuncs import *
-import base64
-import pm4py
 import os
-from PIL import Image
 from fastapi.responses import FileResponse
 
 
@@ -24,7 +21,7 @@ def upload(request: Request, file: UploadFile = File(...)):
     os.environ["PATH"] +=os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
     try:
         contents = file.file.read()
-      
+
     except Exception:
         return {"message": "There was an error uploading the file"}
     finally:
@@ -51,8 +48,8 @@ def upload(request: Request, file: UploadFile = File(...)):
 #     return templates.TemplateResponse("index.html", {"request": request,  "myImage": model})
 
 @app.get("/file/downloadAlpha")
-def download_file():
-  __file__ = "app/repairExample.xes"
+def download_file(file: UploadFile = File(...)):
+  __file__ = file
   return FileResponse(path=alpha_model(os.path.abspath(__file__)), filename='petri_net_alpha.png', media_type='multipart/form-data')
 
 @app.get("/file/downloadInduct")
