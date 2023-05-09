@@ -10,7 +10,7 @@
     {% endblock %}
 </head>
 <body>
-    {% block page_content %}
+{% block page_content %}
 <div class="menu">
     <h1 class="headerMenu">PmTool</h1>
     <div class="ProcessMining_menu">
@@ -50,8 +50,12 @@
                 <input type="file" id="files" accept=".xes" name="file"><br>
                 <button type="submit" value="Upload" class="build-btn">Build</button>
             </form>
+            <!-- <img src="data:image/png;{{MyModel}}" alt="model"> -->
         </div>
         <div class="LogInform">
+            <p>Start Activities: {{StartAct}}</p>
+            <p>End Activities: {{EndAct}}</p>
+            <p>Minimum Self Distance: {{GetMSD}}</p>
             <!-- <p id="StartAct"></p> -->
         </div>
     </div>
@@ -66,6 +70,12 @@
                 <button type="submit" value="Upload" class="build-btn">Build</button>
             </form>
         </div>
+        <div class="LogInform">
+            <p>Start Activities: {{StartActInd}}</p>
+            <p>End Activities: {{EndActInd}}</p>
+            <p>Minimum Self Distance: {{GetMSDInd}}</p>
+            <!-- <p id="StartAct"></p> -->
+        </div>
     </div>
     <div id="heuristics-model">
         <h2 class="model_hHeuristics">Heuristics Miner</h2>
@@ -77,6 +87,12 @@
                 <input type="file" id="filesHeur" accept=".xes" name="file"><br>
                 <button type="submit" value="Upload" class="build-btn">Build</button>
             </form>
+        </div>
+        <div class="LogInform">
+            <p>Start Activities: {{StartActHeu}}</p>
+            <p>End Activities: {{EndActHeu}}</p>
+            <p>Minimum Self Distance: {{GetMSDHeu}}</p>
+            <!-- <p id="StartAct"></p> -->
         </div>
     </div>
     <div id="token-based-model">
@@ -96,13 +112,6 @@
 
 {% block scripts %}
     <script>
-//    let ws = new WebSocket("ws://localhost:8000/ws");
-//         ws.onmessage = function(event) {
-//             if (typeof event.data === 'string') 
-//                 document.getElementById("StartAct").innerHTML = event.data;
-//             else
-//                 image.src = URL.createObjectURL(event.data);
-//         };
 
     </script>
 {% endblock %}

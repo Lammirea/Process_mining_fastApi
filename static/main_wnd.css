@@ -125,13 +125,11 @@ html,body{
 	top:50%;
 	position: absolute;
 	height: 30vh;
-	border: 3px solid #515ADA;
   }
 
   .picture_of_heuristics{
 	top:50%;
 	position: absolute;
-	border: 3px solid #515ADA;
   }
 
   #alpha-model{
@@ -140,6 +138,7 @@ html,body{
 	height: 50vh;
 	background-color: #ffffff;
 	position: relative;
+	display: inline-block;
   }
 
   #inductive-model{
@@ -148,6 +147,7 @@ html,body{
 	height: 50vh;
 	background-color: #ffffff;
 	position: relative;
+	display: inline-block;
   }
 
   #heuristics-model{
@@ -156,6 +156,7 @@ html,body{
 	height: 50vh;
 	background-color: #ffffff;
 	position: relative;
+	display: inline-block;
   }
 
   #token-based-model{
@@ -164,13 +165,13 @@ html,body{
 	height: 50vh;
 	background-color: #ffffff;
 	position: relative;
+	display: inline-block;
   }
 
   .picture_of_model{
 	width: 50vw;
 	height: 70vh;
 	background-color: rgb(81, 90, 218);
-	border: 3px #515ADA;
 	position: absolute;
   	top: 30%;
   	left: 50%;
@@ -195,28 +196,51 @@ html,body{
 	padding: 0;
   }
 
-  .picture_of_alpha,.picture_of_inductive,.picture_of_token{
+  .picture_of_alpha,.picture_of_inductive{
 	display: inline-block;
 	height: auto;
-	width: 50vw;
-	margin-left: 30px;
+	width: 30vw;
+	margin-left: 40px;
 	position: relative;
 	top:30%;
-	text-align: center;
-	left:10%;
   }
 
   .picture_of_heuristics{
 	display: inline-block;
 	height: auto;
-	width: 50vw;
-	margin-left: 30px;
+	width: 30vw;
+	margin-left: 40px;
 	position: relative;
 	top:30%;
-	text-align: center;
-	left:10%;
   }
 
+  .picture_of_token{
+	display: inline-block;
+	height: auto;
+	width: 30vw;
+	margin-left: 40px;
+	position: relative;
+	top:30%;
+	border: 3px solid #515ADA;
+	text-align: center;
+	left: 20%;
+  }
+  .LogInform{
+	height: auto;
+	width: 20vw;
+	position: absolute;
+	top:40%;
+	right: 15%;
+	margin-right: 20px;
+  }
+
+  .LogInform p{
+	color: #515ADA;
+	font-size: 20px;
+	margin:0,5px,10px,0;
+	font-weight: normal;
+  }
+  
 
   .labelLog-btn{
 	background-color: #515ADA;
@@ -228,7 +252,6 @@ html,body{
 	padding: 10px 20px;
 	cursor: pointer;
 	border-radius: 5px;
-	margin-top: 20px;
   }
 
   input[type=file]{
@@ -252,7 +275,6 @@ html,body{
 	border: none;
 	cursor: pointer;
 	margin: 10px 0 10px 0;
-	text-align: center;
 	border-radius: 5px;
   } 
 

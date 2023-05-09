@@ -6,8 +6,6 @@ from pm4py.visualization.heuristics_net import visualizer as hn_visualizer
 from pm4py.algo.conformance.tokenreplay import algorithm as token_replay
 from pm4py.algo.discovery.heuristics import algorithm as heuristics_miner
 from pm4py.utils import get_properties
-from pm4py.statistics.start_activities.pandas import get
-from pm4py.statistics.end_activities.pandas import get
 
 def alpha_model(filename):
     os.environ["PATH"] +=os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
@@ -44,10 +42,12 @@ def conformanceChecking(filename):
 
 def get_start_activities(filename):
     log = pm4py.read_xes(filename)
+    from pm4py.statistics.start_activities.pandas import get
     return get.get_start_activities(log, parameters=get_properties(log))
 
 def get_end_activities(filename):
     log = pm4py.read_xes(filename)
+    from pm4py.statistics.end_activities.pandas import get
     return get.get_end_activities(log, parameters=get_properties(log))
 
 def get_minimum_self_dist(filename):
