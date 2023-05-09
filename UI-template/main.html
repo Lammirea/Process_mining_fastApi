@@ -4,7 +4,7 @@
     {% block head %}
     <meta charset="utf-8"/>
     <link href="{{ url_for('static', path='/main_wnd.css') }}" rel="stylesheet">
-    <!--<link rel="stylesheet" href="main_wnd.css" >-->
+    <!-- <link rel="stylesheet" href="main_wnd.css" > -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %} PmTool</title>
     {% endblock %}
@@ -17,93 +17,92 @@
         <h2 class="PD">Process Discovery</h2>
         <ul class="ProcessMining_list">
             <li>
-                <a id="modelAlpha" class="AlphaMiner">Alpha Miner</a>
+                <a class="AlphaMiner" href="#alpha-model">Alpha Miner</a>
             </li>
             <li>
-                <a id="modelInductive">Inductive Miner</a>
+                <a class="modelInductive" href="#inductive-model">Inductive Miner</a>
             </li>
             <li>
-                <a id="modelHeuristic">Heuristic Miner</a>
+                <a class="modelHeuristics" href="#heuristics-model">Heuristics Miner</a>
             </li>
-        </ul>
+        </ul>    
     </div>
     <div class="ConforChecking_menu">
         <h2 class="CH">Conformance Checking</h2>
         <ul class="ConforChecking_list">
-            <li>Token-based replay</li>
+            <li>
+                <a class="tokenConformance" href="#token-based-model">Token-based replay</a>
+            </li>
         </ul>
     </div>
 </div>
-<div id="modalAlpha" class="show_modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <label class="input-file">
-                <p class="ChooseLog">Выберите журнал событий</p>
-                <input type="file" id="logRight" name="logRight" accept=".xes" onchange='openFile(event)'>
-                <span class="input-file-btn">Выберите файл</span>
-                <p class="ChooseChangedLog">Выберите изменённый журнал событий</p>
-                <input type="file" id="LogChanged" name="LogChanged" accept=".xes" onchange='openFile(event)'>
-                <span class="input-file-btn">Выберите файл</span>
-            </label>         
-        </div>
-</div>
-<div class="show_model">
-    <div class="picture_of_model">
-        {{model}} 
+<div class="Panel">
+    <div class="show_model">
+        <img src="{{ url_for('static', path='/images/Show_Modelbkg.png') }}" alt="main image">
     </div>
-    <button>Создать модель</button>
+    <div id="alpha-model">
+        <h2 class="model_hAlpha">Alpha miner</h2>
+        <div class="picture_of_alpha">
+            <form method="post" action="/file/downloadAlpha" enctype="multipart/form-data">
+                <label for="files" class="labelLog-btn">
+                    <span class="input__file-button-text">Choose log file</span>
+                </label><br>
+                <input type="file" id="files" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
+            </form>
+        </div>
+        <div class="LogInform">
+            <p id="StartAct"></p>
+        </div>
+    </div>
+    <div id="inductive-model">
+        <h2 class="model_hInductive">Inductive miner</h2>
+        <div class="picture_of_inductive">
+            <form method="post" action="/file/downloadInduct" enctype="multipart/form-data">
+                <label for="filesInduct" class="labelLog-btn">
+                    <span class="input__file-button-text">Choose log file</span>
+                </label><br>
+                <input type="file" id="filesInduct" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
+            </form>
+        </div>
+    </div>
+    <div id="heuristics-model">
+        <h2 class="model_hHeuristics">Heuristics Miner</h2>
+        <div class="picture_of_heuristics">
+            <form method="post" action="/file/downloadHeuristics" enctype="multipart/form-data">
+                <label for="filesHeur" class="labelLog-btn">
+                    <span class="input__file-button-text">Choose log file</span>
+                </label><br>
+                <input type="file" id="filesHeur" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
+            </form>
+        </div>
+    </div>
+    <div id="token-based-model">
+        <h2 class="model_hToken">Token-based replay</h2>
+        <div class="picture_of_token">
+            <form method="post" action="/file/downloadConformance" enctype="multipart/form-data">
+                <label for="filesConform" class="labelLog-btn">
+                    <span class="input__file-button-text">Choose log file</span>
+                </label><br>
+                <input type="file" id="filesConform" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
-<script>
-    // Get the modal
-    var modal = document.getElementById("modalAlpha");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("modelAlpha");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    var openFile = function(event) {
-    var input = event.target;
-
-    var reader = new FileReader();
-    reader.onload = function() {
-        var text = reader.result;
-        var node = document.getElementById('logRight');
-        node.innerText = text;
-        //console.log(reader.result.substring(0, 200));
-    };
-    reader.readAsText(input.files[0]);
-    var data = reader.readAsText(input.files[0]);
-    const s = JSON.stringify(reader); // Stringify converts a JavaScript object or value to a JSON string
-    //window.alert(s)
-    $.ajax({
-            url:"/test",
-            type:"POST",
-            contentType: "application/json",
-            data: JSON.stringify(s)});
-};
+    <script>
+   let ws = new WebSocket("ws://localhost:8000/ws");
+        ws.onmessage = function(event) {
+            if (typeof event.data === 'string') 
+                document.getElementById("StartAct").innerHTML = event.data;
+            else
+                image.src = URL.createObjectURL(event.data);
+        };
 
     </script>
 {% endblock %}

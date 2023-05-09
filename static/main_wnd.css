@@ -10,6 +10,26 @@ html,body{
 	width: 100%;
 }
 
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: rgba(81, 90, 218, 0.7);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: rgb(81, 90, 218);
+  }
+
 .menu{
 	border: 2px red;
 	padding: 0;
@@ -19,14 +39,30 @@ html,body{
 	background: linear-gradient(-45deg, #efd5ff 0%, #515ada 100%);
 	width: calc(100% - 70vw);
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	left: 0;
 }
 
-.AlphaMiner{
+.AlphaMiner,.modelInductive,.tokenConformance{
 	cursor: pointer;
 	text-decoration: none;
+	color: #FFFFFF;
 }
+
+.modelHeuristics{
+	cursor: pointer;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.AlphaMiner:hover,.modelInductive:hover,.tokenConformance:hover{
+	color: rgba(81, 90, 218, 0.7);
+}
+
+.modelHeuristics:hover{
+	color: rgba(81, 90, 218, 0.7);
+}
+
 .headerMenu{
 	font-weight: "bold";
 	color: #FFFFFF;
@@ -35,142 +71,102 @@ html,body{
 }
 
 .PD, .CH{
-	font-weight: "bold";
+	font-weight: normal;
 	font-size: 24pt;
 	color: #FFFFFF;
 	padding-bottom: 6px;
+	cursor: default;
+	margin-left: 10px;
 }
 
-ul {
-  list-style: none; /* Remove HTML bullets */
-  padding: 0;
-  margin: 0;
-}
-
-li { 
-  padding-left: 16px;
-  font-size: 24pt;
-  font-weight: normal;
-  color: #FFFFFF; /* Or a color you prefer */ 
-}
-
-li::before {
-  content: "|"; /* Insert content that looks like bullets */
-  padding-right: 8px;
-  color: #FFFFFF; /* Or a color you prefer */
-}
-
-/* The Modal (background) */
-.show_modal {
-	cursor:pointer;
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-	background-color: #ffffff;
-	margin: auto;
-	padding: 20px;
-	border: 3px solid #515ADA;
-	color: #515ADA;
-	width: 80%;
-	text-align: center;
-	vertical-align: middle;
-	font-size: 24px;
-	font-weight: normal;
-  }
-  
- /*стиль кнопки модального окна*/
-  .input-file {
-	position: relative;
-	display: inline-block;
-}
-.input-file-btn {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
-	font-size: 24px;
-	vertical-align: middle;
-	color: rgb(255 255 255);
-	text-align: center;
-	border-radius: 4px;
-	background-color: #515ADA;
-	line-height: 22px;
-	height: 40px;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	border: none;
+  ul {
+	list-style: none; /* Remove HTML bullets */
+	padding: 0;
 	margin: 0;
-	transition: background-color 0.2s;
-}
-.input-file input[type=file] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	display: block;
-	width: 0;
-	height: 0;
-}
- 
-/* Focus */
-.input-file input[type=file]:focus + .input-file-btn {
-	box-shadow: 0 0 0 0.2rem rgba(81, 90, 218,.25);
-}
- 
-/* Hover/active */
-.input-file:hover .input-file-btn {
-	background-color: rgb(81, 90, 218);
-}
-.input-file:active .input-file-btn {
-	background-color: #464eba;
-}
- 
-/* Disabled */
-.input-file input[type=file]:disabled + .input-file-btn {
-	background-color: #eee;
-}
- 
-  /* The Close Button */
-  .close {
-	color: #aaaaaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
+  li { 
+	padding-left: 16px;
+	font-size: 24pt;
+	font-weight: normal;
+	color: #FFFFFF; /* Or a color you prefer */ 
   }
-
+  
+  li::before {
+	content: "|"; /* Insert content that looks like bullets */
+	padding-right: 8px;
+	color: #FFFFFF; /* Or a color you prefer */
+  }
+  
   .show_model{
-	position: absolute;
+	position: relative;
 	display: inline-block;
 	top: 0; 
 	right: 0;
 	width:70vw;
-	height: 100vh;
+	height: 90vh;
 	background-color: #ffffff;
+  }
+
+  img {
+	max-width: 100%;
+	height: auto;
+  }
+
+  .Panel{
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	width:70vw;
+	background-color: #ffffff;
+  }
+
+  .picture_of_alpha,.picture_of_inductive,.picture_of_token{
+	top:50%;
+	position: absolute;
+  }
+
+  .picture_of_heuristics{
+	top:50%;
+	position: absolute;
+  }
+
+  #alpha-model{
+	right: 0;
+	width:70vw;
+	height: 50vh;
+	background-color: #ffffff;
+	position: relative;
+  }
+
+  #inductive-model{
+	right: 0;
+	width:70vw;
+	height: 50vh;
+	background-color: #ffffff;
+	position: relative;
+  }
+
+  #heuristics-model{
+	right: 0;
+	width:70vw;
+	height: 50vh;
+	background-color: #ffffff;
+	position: relative;
+  }
+
+  #token-based-model{
+	right: 0;
+	width:70vw;
+	height: 50vh;
+	background-color: #ffffff;
+	position: relative;
   }
 
   .picture_of_model{
 	width: 50vw;
 	height: 70vh;
-	background-color: #515ADA;
+	background-color: rgb(81, 90, 218);
 	border: 3px #515ADA;
 	position: absolute;
   	top: 30%;
@@ -178,23 +174,79 @@ li::before {
   	transform: translate(-50%, -30%);
   }
 
-  button{
-	position: absolute;
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
+  .model_hAlpha,.model_hInductive,.model_hToken{
+	text-align: left;
+	left: 0;
 	font-size: 24px;
-	vertical-align: middle;
-	color: rgb(255 255 255);
-	text-align: center;
-	border-radius: 4px;
-	background-color: #515ADA;
-	line-height: 22px;
-	height: 40px;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	border: none;
-	top:90%;
-	left: 50%;
-	transform: translate(-50%,-90%);
+	color: #515ADA;
+	margin-left: 30px;
+	padding: 0;
   }
+
+  .model_hHeuristics{
+	text-align: left;
+	left: 0;
+	font-size: 24px;
+	color: #515ADA;
+	margin-left: 30px;
+	padding: 0;
+  }
+
+  .picture_of_alpha,.picture_of_inductive,.picture_of_token{
+	display: inline-block;
+	height: auto;
+	width: 50vw;
+	margin-left: 30px;
+	position: relative;
+	top:30%;
+  }
+
+  .picture_of_heuristics{
+	display: inline-block;
+	height: auto;
+	width: 50vw;
+	margin-left: 30px;
+	position: relative;
+	top:30%;
+  }
+
+
+  .labelLog-btn{
+	background-color: #515ADA;
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 15px;
+  }
+
+  input[type=file]{
+	opacity: 0;
+  	visibility: hidden;
+	position: absolute;
+	border-radius: 15px;
+  }
+
+  .input__file-button-text {
+	line-height: 1;
+	margin-top: 1px;
+	border-radius: 15px;
+  }
+
+  .build-btn{
+	background-color: #515ADA;
+	color: #FFFFFF;
+	font-weight: normal;
+	font-size: 20px;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	margin: 10px 0 10px 0;
+	text-align: center;
+	border-radius: 15px;
+  } 
+
+
