@@ -52,7 +52,7 @@
             </form>
         </div>
         <div class="LogInform">
-            <p id="StartAct"></p>
+            <!-- <p id="StartAct"></p> -->
         </div>
     </div>
     <div id="inductive-model">
@@ -96,13 +96,13 @@
 
 {% block scripts %}
     <script>
-   let ws = new WebSocket("ws://localhost:8000/ws");
-        ws.onmessage = function(event) {
-            if (typeof event.data === 'string') 
-                document.getElementById("StartAct").innerHTML = event.data;
-            else
-                image.src = URL.createObjectURL(event.data);
-        };
+//    let ws = new WebSocket("ws://localhost:8000/ws");
+//         ws.onmessage = function(event) {
+//             if (typeof event.data === 'string') 
+//                 document.getElementById("StartAct").innerHTML = event.data;
+//             else
+//                 image.src = URL.createObjectURL(event.data);
+//         };
 
     </script>
 {% endblock %}

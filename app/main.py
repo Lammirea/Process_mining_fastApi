@@ -16,14 +16,14 @@ templates = Jinja2Templates(directory="UI-template",auto_reload=True)
 async def home(request: Request):
     return templates.TemplateResponse("main.html", {"request": request})
 
-@app.websocket("/ws")
-async def get_stream(websocket: WebSocket):
-    await websocket.accept()
-    try:
-        while True:
-            await websocket.send_text(get_start_activities("app/repairExample.xes"))
-    except WebSocketDisconnect:
-        print("Client disconnected") 
+# @app.websocket("/ws")
+# async def get_stream(websocket: WebSocket):
+#     await websocket.accept()
+#     try:
+#         while True:
+#             await websocket.send_text(get_start_activities("app/repairExample.xes"))
+#     except WebSocketDisconnect:
+#         print("Client disconnected") 
 
 @app.post("/file/downloadAlpha")
 async def upload_alpha(request: Request, file: UploadFile = File(...)):

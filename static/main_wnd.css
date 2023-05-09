@@ -124,11 +124,14 @@ html,body{
   .picture_of_alpha,.picture_of_inductive,.picture_of_token{
 	top:50%;
 	position: absolute;
+	height: 30vh;
+	border: 3px solid #515ADA;
   }
 
   .picture_of_heuristics{
 	top:50%;
 	position: absolute;
+	border: 3px solid #515ADA;
   }
 
   #alpha-model{
@@ -199,6 +202,8 @@ html,body{
 	margin-left: 30px;
 	position: relative;
 	top:30%;
+	text-align: center;
+	left:10%;
   }
 
   .picture_of_heuristics{
@@ -208,6 +213,8 @@ html,body{
 	margin-left: 30px;
 	position: relative;
 	top:30%;
+	text-align: center;
+	left:10%;
   }
 
 
@@ -220,20 +227,20 @@ html,body{
 	color: #FFFFFF;
 	padding: 10px 20px;
 	cursor: pointer;
-	border-radius: 15px;
+	border-radius: 5px;
+	margin-top: 20px;
   }
 
   input[type=file]{
 	opacity: 0;
   	visibility: hidden;
 	position: absolute;
-	border-radius: 15px;
   }
 
   .input__file-button-text {
 	line-height: 1;
 	margin-top: 1px;
-	border-radius: 15px;
+	padding: 10px 20px;
   }
 
   .build-btn{
@@ -246,7 +253,7 @@ html,body{
 	cursor: pointer;
 	margin: 10px 0 10px 0;
 	text-align: center;
-	border-radius: 15px;
+	border-radius: 5px;
   } 
 
 
