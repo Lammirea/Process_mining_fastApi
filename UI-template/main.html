@@ -22,6 +22,9 @@
             <li>
                 <a class="modelInductive" href="#inductive-model">Inductive Miner</a>
             </li>
+            <li>
+                <a class="modelHeuristics" href="#heuristics-model">Heuristics Miner</a>
+            </li>
         </ul>    
     </div>
     <div class="ConforChecking_menu">
@@ -40,7 +43,7 @@
     <div id="alpha-model">
         <h2 class="model_hAlpha">Alpha miner</h2>
         <div class="picture_of_alpha">
-            <form method="get" action="/file/downloadAlpha" enctype="multipart/form-data">
+            <form method="post" action="/file/downloadAlpha" enctype="multipart/form-data">
                 <label for="files" class="labelLog-btn">
                     <span class="input__file-button-text">Choose log file</span>
                 </label><br>
@@ -52,24 +55,36 @@
     <div id="inductive-model">
         <h2 class="model_hInductive">Inductive miner</h2>
         <div class="picture_of_inductive">
-            <form method="get" action="/file/downloadInduct" enctype="multipart/form-data">
-                <label for="files" class="labelLog-btn">
+            <form method="post" action="/file/downloadInduct" enctype="multipart/form-data">
+                <label for="filesInduct" class="labelLog-btn">
                     <span class="input__file-button-text">Choose log file</span>
                 </label><br>
-                <input type="file" id="files" accept=".xes" name="file"><br>
-                <button type="submit" value="Upload" class="build-btn">Send</button>
+                <input type="file" id="filesInduct" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
+            </form>
+        </div>
+    </div>
+    <div id="heuristics-model">
+        <h2 class="model_hHeuristics">Heuristics Miner</h2>
+        <div class="picture_of_heuristics">
+            <form method="post" action="/file/downloadHeuristics" enctype="multipart/form-data">
+                <label for="filesHeur" class="labelLog-btn">
+                    <span class="input__file-button-text">Choose log file</span>
+                </label><br>
+                <input type="file" id="filesHeur" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
             </form>
         </div>
     </div>
     <div id="token-based-model">
         <h2 class="model_hToken">Token-based replay</h2>
         <div class="picture_of_token">
-            <form method="get" action="/file/download" enctype="multipart/form-data">
-                <label for="files" class="labelLog-btn">
+            <form method="post" action="/file/downloadConformance" enctype="multipart/form-data">
+                <label for="filesConform" class="labelLog-btn">
                     <span class="input__file-button-text">Choose log file</span>
                 </label><br>
-                <input type="file" id="files" accept=".xes" name="file"><br>
-                <button type="submit" value="Upload" class="build-btn">Send</button>
+                <input type="file" id="filesConform" accept=".xes" name="file"><br>
+                <button type="submit" value="Upload" class="build-btn">Build</button>
             </form>
         </div>
     </div>

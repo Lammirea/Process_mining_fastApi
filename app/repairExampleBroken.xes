@@ -23,409 +23,9 @@
 	<classifier name="Resource" keys="org:resource"/>
 	<classifier name="Event Name AND Resource" keys="concept:name org:resource"/>
 	<string key="source" value="CPN Tools simulation"/>
-	<string key="concept:name" value="repairExample.mxml"/>
+	<string key="concept:name" value="repairExampleBroken.mxml"/>
 	<string key="lifecycle:model" value="standard"/>
 	<string key="description" value="Simulated process"/>
-	<trace>
-		<string key="concept:name" value="1"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-02T12:23:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-02T12:23:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="6"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-02T12:30:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-02T12:31:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-02T12:49:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-02T12:49:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-02T12:55:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-02T13:10:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-02T13:10:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="10"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-01T11:09:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-01T11:09:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="3"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-01T11:15:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-01T11:35:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-01T11:42:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-01T11:42:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-01T11:48:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-01T11:54:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-01T11:54:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-01T11:55:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-01T12:03:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-01T12:03:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-01T12:09:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-01T12:14:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="100"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-04T02:28:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-04T02:28:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="8"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-04T02:36:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-04T02:52:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-04T03:09:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-04T03:09:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-04T03:18:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-04T03:20:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-04T03:28:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="1000"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T06:23:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T06:23:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="3"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-22T06:28:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T06:35:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T06:49:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T06:49:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T06:58:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T07:03:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T07:08:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="1001"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T07:51:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-22T07:51:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="8"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-22T07:56:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-22T08:06:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T08:35:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-22T08:54:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-22T08:54:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T09:00:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="1002"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T21:40:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-22T21:40:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="3"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-22T21:50:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T22:12:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T22:26:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T22:32:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-22T22:32:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T22:40:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
 	<trace>
 		<string key="concept:name" value="1003"/>
 		<string key="description" value="Simulated process instance"/>
@@ -29243,14 +28843,14 @@
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="defectType" value="8"/>
 			<string key="org:resource" value="Tester2"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<string key="phoneType" value="T3"/>
 			<date key="time:timestamp" value="1970-01-08T21:50:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC3"/>
 			<date key="time:timestamp" value="1970-01-08T22:10:00.000+01:00"/>
@@ -29365,12 +28965,12 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester4"/>
 			<date key="time:timestamp" value="1970-01-09T21:01:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="defectType" value="5"/>
 			<string key="org:resource" value="Tester4"/>
@@ -29397,7 +28997,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester2"/>
 			<date key="time:timestamp" value="1970-01-09T22:15:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
@@ -29418,7 +29018,7 @@
 			<date key="time:timestamp" value="1970-01-09T22:30:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="363"/>
@@ -29481,7 +29081,7 @@
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverS2"/>
 			<date key="time:timestamp" value="1970-01-08T22:36:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Simple)"/>
@@ -29498,7 +29098,7 @@
 			<date key="time:timestamp" value="1970-01-08T22:45:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="2"/>
 			<string key="org:resource" value="Tester6"/>
@@ -29519,7 +29119,7 @@
 	<trace>
 		<string key="concept:name" value="364"/>
 		<string key="description" value="Simulated process instance"/>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-09T10:08:00.000+01:00"/>
 			<string key="concept:name" value="Register"/>
@@ -29530,7 +29130,7 @@
 			<date key="time:timestamp" value="1970-01-09T10:08:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="defectType" value="4"/>
 			<string key="org:resource" value="Tester2"/>
@@ -29557,14 +29157,14 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="numberRepairs" value="1"/>
 			<string key="org:resource" value="Tester6"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="1970-01-09T10:56:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-09T10:58:00.000+01:00"/>
@@ -29589,7 +29189,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester2"/>
 			<date key="time:timestamp" value="1970-01-09T09:21:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -29602,7 +29202,7 @@
 			<string key="phoneType" value="T2"/>
 			<date key="time:timestamp" value="1970-01-09T09:29:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC3"/>
 			<date key="time:timestamp" value="1970-01-09T09:44:00.000+01:00"/>
@@ -29615,7 +29215,7 @@
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverC3"/>
 			<date key="time:timestamp" value="1970-01-09T10:24:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
@@ -29634,7 +29234,7 @@
 			<date key="time:timestamp" value="1970-01-09T10:30:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="System"/>
@@ -29731,7 +29331,7 @@
 			<date key="time:timestamp" value="1970-01-09T22:31:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-09T22:48:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
@@ -29762,7 +29362,7 @@
 			<date key="time:timestamp" value="1970-01-09T23:12:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="1"/>
 			<string key="org:resource" value="System"/>
@@ -29845,7 +29445,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester2"/>
 			<date key="time:timestamp" value="1970-01-09T21:40:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -29876,7 +29476,7 @@
 			<date key="time:timestamp" value="1970-01-09T22:24:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="Tester5"/>
@@ -29909,7 +29509,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester2"/>
 			<date key="time:timestamp" value="1970-01-01T20:58:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -29928,7 +29528,7 @@
 			<date key="time:timestamp" value="1970-01-01T21:19:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverS2"/>
 			<date key="time:timestamp" value="1970-01-01T21:26:00.000+01:00"/>
@@ -29999,7 +29599,7 @@
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverS3"/>
 			<date key="time:timestamp" value="1970-01-10T02:04:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Simple)"/>
@@ -30026,7 +29626,7 @@
 			<date key="time:timestamp" value="1970-01-10T02:20:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="371"/>
@@ -30051,7 +29651,7 @@
 			<date key="time:timestamp" value="1970-01-10T01:44:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverC1"/>
 			<date key="time:timestamp" value="1970-01-10T01:47:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
@@ -30090,7 +29690,7 @@
 			<date key="time:timestamp" value="1970-01-10T02:25:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="372"/>
@@ -30171,7 +29771,7 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="Tester4"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -30202,7 +29802,7 @@
 			<date key="time:timestamp" value="1970-01-10T07:50:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="Tester3"/>
@@ -30223,7 +29823,7 @@
 	<trace>
 		<string key="concept:name" value="373"/>
 		<string key="description" value="Simulated process instance"/>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-08T23:50:00.000+01:00"/>
 			<string key="concept:name" value="Register"/>
@@ -30242,7 +29842,7 @@
 			<string key="phoneType" value="T1"/>
 			<date key="time:timestamp" value="1970-01-09T00:00:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverS1"/>
 			<date key="time:timestamp" value="1970-01-09T00:08:00.000+01:00"/>
@@ -30363,7 +29963,7 @@
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="defectType" value="4"/>
 			<string key="org:resource" value="Tester2"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -30402,7 +30002,7 @@
 			<date key="time:timestamp" value="1970-01-09T23:55:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="1"/>
 			<string key="org:resource" value="System"/>
@@ -30477,70 +30077,6 @@
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="376"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-08T22:04:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-08T22:04:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-08T22:09:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-08T22:28:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-08T22:39:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-08T22:39:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-08T22:46:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-08T22:49:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-08T22:58:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
 		<string key="concept:name" value="377"/>
 		<string key="description" value="Simulated process instance"/>
 		<event>
@@ -30581,7 +30117,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester5"/>
 			<date key="time:timestamp" value="1970-01-09T21:38:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
@@ -30602,12 +30138,12 @@
 			<date key="time:timestamp" value="1970-01-09T21:53:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="378"/>
 		<string key="description" value="Simulated process instance"/>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-10T02:04:00.000+01:00"/>
 			<string key="concept:name" value="Register"/>
@@ -30644,7 +30180,7 @@
 			<date key="time:timestamp" value="1970-01-10T02:23:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="1"/>
 			<string key="org:resource" value="Tester6"/>
@@ -30697,7 +30233,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-10T01:32:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
@@ -30714,7 +30250,7 @@
 			<date key="time:timestamp" value="1970-01-10T01:35:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="Tester3"/>
@@ -30747,7 +30283,7 @@
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="defectType" value="8"/>
 			<string key="org:resource" value="Tester2"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -30760,7 +30296,7 @@
 			<date key="time:timestamp" value="1970-01-02T04:00:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC2"/>
 			<date key="time:timestamp" value="1970-01-02T04:10:00.000+01:00"/>
@@ -30799,7 +30335,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester5"/>
 			<date key="time:timestamp" value="1970-01-02T04:34:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
@@ -30826,71 +30362,7 @@
 			<date key="time:timestamp" value="1970-01-02T04:49:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="380"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-09T15:55:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-09T15:55:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="4"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-09T16:02:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-09T16:21:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-09T16:27:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-09T16:35:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-09T16:35:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-09T16:43:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-09T16:49:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="381"/>
@@ -30971,7 +30443,7 @@
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="defectType" value="6"/>
 			<string key="org:resource" value="Tester2"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -30996,7 +30468,7 @@
 			<date key="time:timestamp" value="1970-01-09T00:18:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="Tester4"/>
 			<date key="time:timestamp" value="1970-01-09T00:18:00.000+01:00"/>
@@ -31085,70 +30557,6 @@
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="384"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-10T08:05:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-10T08:05:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="8"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-10T08:14:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-10T08:19:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-10T08:39:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-10T08:39:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-10T08:45:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-10T08:51:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-10T08:51:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
 		<string key="concept:name" value="385"/>
 		<string key="description" value="Simulated process instance"/>
 		<event>
@@ -31171,12 +30579,12 @@
 			<date key="time:timestamp" value="1970-01-09T16:19:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverC2"/>
 			<date key="time:timestamp" value="1970-01-09T16:35:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC2"/>
 			<date key="time:timestamp" value="1970-01-09T16:45:00.000+01:00"/>
@@ -31221,7 +30629,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester6"/>
 			<date key="time:timestamp" value="1970-01-09T02:54:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -31252,7 +30660,7 @@
 			<date key="time:timestamp" value="1970-01-09T03:33:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="1"/>
 			<string key="org:resource" value="Tester3"/>
@@ -31285,7 +30693,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester1"/>
 			<date key="time:timestamp" value="1970-01-09T17:26:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -31298,7 +30706,7 @@
 			<string key="phoneType" value="T1"/>
 			<date key="time:timestamp" value="1970-01-09T17:32:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC1"/>
 			<date key="time:timestamp" value="1970-01-09T17:41:00.000+01:00"/>
@@ -31323,7 +30731,7 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="Tester6"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -31338,7 +30746,7 @@
 			<date key="time:timestamp" value="1970-01-09T18:16:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="388"/>
@@ -31401,7 +30809,7 @@
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverS1"/>
 			<date key="time:timestamp" value="1970-01-09T05:57:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Simple)"/>
@@ -31426,7 +30834,7 @@
 			<date key="time:timestamp" value="1970-01-09T06:05:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="false"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-09T06:15:00.000+01:00"/>
@@ -31561,7 +30969,7 @@
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverS2"/>
 			<date key="time:timestamp" value="1970-01-02T02:19:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Simple)"/>
@@ -31586,7 +30994,7 @@
 			<date key="time:timestamp" value="1970-01-02T02:30:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="1"/>
 			<string key="org:resource" value="System"/>
@@ -31594,134 +31002,6 @@
 			<date key="time:timestamp" value="1970-01-02T02:34:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="390"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-10T15:21:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-10T15:21:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="4"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-10T15:31:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-10T15:50:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-10T15:56:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-10T15:56:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-10T16:01:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-10T16:07:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-10T16:11:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-10T16:11:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-10T16:19:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-10T16:19:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-10T16:26:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-10T16:32:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-10T16:32:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-10T16:39:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-10T16:39:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="3"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-10T16:45:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="3"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-10T16:53:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="false"/>
 		</event>
 	</trace>
 	<trace>
@@ -31849,7 +31129,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-10T00:49:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
@@ -31860,7 +31140,7 @@
 			<date key="time:timestamp" value="1970-01-10T00:59:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="Tester1"/>
 			<date key="time:timestamp" value="1970-01-10T00:59:00.000+01:00"/>
@@ -31880,70 +31160,6 @@
 			<string key="org:resource" value="System"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="1970-01-10T01:13:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="393"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-09T10:37:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-09T10:37:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="10"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-09T10:42:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-09T11:10:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-09T11:16:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-09T11:30:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-09T11:30:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-09T11:36:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-09T11:46:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
 		</event>
@@ -31989,7 +31205,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester4"/>
 			<date key="time:timestamp" value="1970-01-09T10:00:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
@@ -32010,7 +31226,7 @@
 			<date key="time:timestamp" value="1970-01-09T10:16:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="395"/>
@@ -32053,7 +31269,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester3"/>
 			<date key="time:timestamp" value="1970-01-09T18:17:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
@@ -32074,7 +31290,7 @@
 			<date key="time:timestamp" value="1970-01-09T18:31:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="396"/>
@@ -32155,7 +31371,7 @@
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="defectType" value="9"/>
 			<string key="org:resource" value="Tester3"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -32174,7 +31390,7 @@
 			<date key="time:timestamp" value="1970-01-09T16:14:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC3"/>
 			<date key="time:timestamp" value="1970-01-09T17:01:00.000+01:00"/>
@@ -32239,7 +31455,7 @@
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverC2"/>
 			<date key="time:timestamp" value="1970-01-10T11:02:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
@@ -32258,7 +31474,7 @@
 			<date key="time:timestamp" value="1970-01-10T11:11:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="System"/>
@@ -32333,70 +31549,6 @@
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="4"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-02T00:46:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-02T00:46:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-02T00:53:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-02T01:21:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-02T01:29:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-02T01:32:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-02T01:32:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-02T01:42:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-02T01:50:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
 		<string key="concept:name" value="40"/>
 		<string key="description" value="Simulated process instance"/>
 		<event>
@@ -32463,12 +31615,12 @@
 	<trace>
 		<string key="concept:name" value="400"/>
 		<string key="description" value="Simulated process instance"/>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-09T14:13:00.000+01:00"/>
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="Tester6"/>
 			<date key="time:timestamp" value="1970-01-09T14:13:00.000+01:00"/>
@@ -32571,7 +31723,7 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="numberRepairs" value="3"/>
 			<string key="org:resource" value="Tester2"/>
 			<string key="lifecycle:transition" value="complete"/>
@@ -32586,7 +31738,7 @@
 			<date key="time:timestamp" value="1970-01-09T15:31:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="false"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="401"/>
@@ -32717,70 +31869,6 @@
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="403"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-09T09:21:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-09T09:21:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="6"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-09T09:31:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-09T09:37:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-09T09:48:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-09T09:52:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-09T09:52:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-09T10:02:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-09T10:10:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
 		<string key="concept:name" value="404"/>
 		<string key="description" value="Simulated process instance"/>
 		<event>
@@ -32853,7 +31941,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester2"/>
 			<date key="time:timestamp" value="1970-01-10T18:23:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -32872,7 +31960,7 @@
 			<date key="time:timestamp" value="1970-01-10T18:45:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC2"/>
 			<date key="time:timestamp" value="1970-01-10T18:55:00.000+01:00"/>
@@ -32987,14 +32075,14 @@
 			<string key="concept:name" value="Analyze Defect"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="defectType" value="3"/>
 			<string key="org:resource" value="Tester3"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<string key="phoneType" value="T1"/>
 			<date key="time:timestamp" value="1970-01-10T16:48:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverS1"/>
 			<date key="time:timestamp" value="1970-01-10T17:14:00.000+01:00"/>
@@ -33109,7 +32197,7 @@
 			<string key="concept:name" value="Register"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester4"/>
 			<date key="time:timestamp" value="1970-01-09T23:33:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
@@ -33122,7 +32210,7 @@
 			<string key="phoneType" value="T1"/>
 			<date key="time:timestamp" value="1970-01-09T23:42:00.000+01:00"/>
 			<string key="concept:name" value="Analyze Defect"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="SolverC2"/>
 			<date key="time:timestamp" value="1970-01-10T00:09:00.000+01:00"/>
@@ -33261,70 +32349,6 @@
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="41"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-03T03:45:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-03T03:45:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-03T03:53:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-03T04:00:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-03T04:13:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-03T04:13:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-03T04:18:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-03T04:22:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-03T04:28:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
 		<string key="concept:name" value="410"/>
 		<string key="description" value="Simulated process instance"/>
 		<event>
@@ -33359,12 +32383,12 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester6"/>
 			<date key="time:timestamp" value="1970-01-09T19:26:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-09T19:31:00.000+01:00"/>
@@ -33461,12 +32485,12 @@
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester6"/>
 			<date key="time:timestamp" value="1970-01-10T03:50:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="lifecycle:transition" value="start"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="2"/>
 			<string key="org:resource" value="Tester6"/>
@@ -33565,12 +32589,12 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-10T00:53:00.000+01:00"/>
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="System"/>
@@ -36725,7 +35749,7 @@
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="Tester3"/>
 			<date key="time:timestamp" value="1970-01-02T20:14:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
@@ -36738,7 +35762,7 @@
 			<date key="time:timestamp" value="1970-01-02T20:22:00.000+01:00"/>
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="false"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="System"/>
 			<date key="time:timestamp" value="1970-01-02T20:31:00.000+01:00"/>
@@ -36899,14 +35923,14 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="System"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="1970-01-11T22:25:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="452"/>
@@ -37091,14 +36115,14 @@
 			<string key="concept:name" value="Test Repair"/>
 			<string key="defectFixed" value="true"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="numberRepairs" value="0"/>
 			<string key="org:resource" value="System"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="1970-01-11T09:03:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
-		</event>
+		</event>-->
 	</trace>
 	<trace>
 		<string key="concept:name" value="455"/>
@@ -37167,12 +36191,12 @@
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="start"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverS2"/>
 			<date key="time:timestamp" value="1970-01-10T21:41:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Simple)"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="Tester4"/>
 			<date key="time:timestamp" value="1970-01-10T21:41:00.000+01:00"/>
@@ -81101,70 +80125,6 @@
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="98"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-04T02:34:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-04T02:34:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="1"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-04T02:44:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-04T03:02:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-04T03:11:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-04T03:29:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-04T03:29:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-04T03:39:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-04T03:44:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
 		<string key="concept:name" value="980"/>
 		<string key="description" value="Simulated process instance"/>
 		<event>
@@ -81263,12 +80223,12 @@
 			<string key="concept:name" value="Inform User"/>
 			<string key="lifecycle:transition" value="complete"/>
 		</event>
-		<event>
+		<!--<event>
 			<string key="org:resource" value="SolverC3"/>
 			<date key="time:timestamp" value="1970-01-22T12:27:00.000+01:00"/>
 			<string key="concept:name" value="Repair (Complex)"/>
 			<string key="lifecycle:transition" value="complete"/>
-		</event>
+		</event>-->
 		<event>
 			<string key="org:resource" value="Tester5"/>
 			<date key="time:timestamp" value="1970-01-22T12:27:00.000+01:00"/>
@@ -81288,1510 +80248,6 @@
 			<string key="org:resource" value="System"/>
 			<string key="lifecycle:transition" value="complete"/>
 			<date key="time:timestamp" value="1970-01-22T12:42:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="982"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T10:30:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T10:30:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-22T10:38:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T11:02:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T11:08:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T11:08:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T11:11:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T11:15:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T11:24:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T11:24:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T11:30:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-22T11:30:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T11:35:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T11:43:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T11:43:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T11:57:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-22T11:57:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="3"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T12:07:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="3"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T12:17:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="983"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T06:11:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T06:11:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="7"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-21T06:21:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T06:30:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T06:47:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-21T06:47:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T06:56:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T06:56:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T07:06:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="984"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T10:40:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-22T10:40:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="6"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-22T10:47:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T10:48:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T10:53:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T10:53:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T11:00:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T11:09:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-22T11:09:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-22T11:21:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-22T11:21:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T11:26:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T11:31:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T11:38:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="985"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T12:42:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-21T12:42:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="9"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-21T12:50:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T13:08:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-21T13:18:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-21T14:00:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T14:00:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T14:07:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T14:17:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="986"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T15:02:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T15:02:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="7"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-22T15:09:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-22T15:19:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T15:29:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-22T15:33:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T15:33:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T15:41:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T15:46:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="987"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T08:52:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-21T08:52:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="2"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-21T08:57:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-21T09:16:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T09:28:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-21T09:31:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-21T09:31:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T09:38:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T09:44:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="988"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T14:25:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T14:25:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="10"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-21T14:32:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T14:59:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T15:11:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-21T15:11:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T15:16:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T15:21:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T15:22:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="989"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T14:41:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-22T14:41:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="1"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-22T14:46:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T15:03:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-22T15:16:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-22T15:24:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-22T15:24:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T15:33:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T15:43:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="99"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-03T11:26:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-03T11:26:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="8"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-03T11:31:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-03T11:42:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-03T12:00:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-03T12:00:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-03T12:07:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-03T12:21:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-03T12:21:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="990"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T10:59:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-21T10:59:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="6"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-21T11:08:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T11:32:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-21T11:34:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-21T11:40:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-21T11:40:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T11:45:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T11:53:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T11:53:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T12:05:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T12:05:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T12:15:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T12:20:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="991"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T19:53:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-22T19:53:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="2"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-22T19:59:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T20:13:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T20:18:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-22T20:18:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T20:23:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T20:30:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T20:30:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T20:37:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-22T20:37:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T20:41:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T20:46:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T20:51:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T20:51:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS1"/>
-			<date key="time:timestamp" value="1970-01-22T20:57:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-22T20:57:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="3"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T21:04:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="3"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T21:13:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="992"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T19:10:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-22T19:10:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="9"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-22T19:18:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-22T19:46:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T20:03:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-22T20:03:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-22T20:03:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T20:12:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T20:22:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="993"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T08:08:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T08:08:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="10"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T1"/>
-			<date key="time:timestamp" value="1970-01-21T08:13:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T08:20:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-21T08:38:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-21T08:38:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T08:48:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T08:56:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-21T08:56:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T09:03:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-21T09:37:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-21T09:37:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T09:46:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T09:53:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="994"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T18:56:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-21T18:56:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="6"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-21T19:03:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-21T19:11:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-21T19:17:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T19:17:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T19:27:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T19:36:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-21T19:36:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-21T19:49:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-21T19:49:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T19:50:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T19:59:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T20:06:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="995"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T13:33:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester5"/>
-			<date key="time:timestamp" value="1970-01-21T13:33:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="7"/>
-			<string key="org:resource" value="Tester5"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-21T13:40:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-21T13:54:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T14:01:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-21T14:07:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-21T14:07:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T14:13:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T14:21:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="996"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T15:35:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-22T15:35:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="9"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-22T15:43:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-22T15:55:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T16:04:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC2"/>
-			<date key="time:timestamp" value="1970-01-22T16:06:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester3"/>
-			<date key="time:timestamp" value="1970-01-22T16:06:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester3"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T16:13:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T16:23:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="997"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T18:16:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-21T18:16:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="10"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T2"/>
-			<date key="time:timestamp" value="1970-01-21T18:25:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-21T18:35:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC1"/>
-			<date key="time:timestamp" value="1970-01-21T18:47:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester6"/>
-			<date key="time:timestamp" value="1970-01-21T18:47:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester6"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T18:56:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-21T19:06:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-21T19:06:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="998"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T06:53:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester1"/>
-			<date key="time:timestamp" value="1970-01-22T06:53:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="7"/>
-			<string key="org:resource" value="Tester1"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-22T07:01:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-22T07:07:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T07:42:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverC3"/>
-			<date key="time:timestamp" value="1970-01-22T07:49:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Complex)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-22T07:49:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T07:56:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="0"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T08:03:00.000+01:00"/>
-			<string key="concept:name" value="Archive Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="999"/>
-		<string key="description" value="Simulated process instance"/>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T19:01:00.000+01:00"/>
-			<string key="concept:name" value="Register"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-22T19:01:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="defectType" value="4"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<string key="phoneType" value="T3"/>
-			<date key="time:timestamp" value="1970-01-22T19:06:00.000+01:00"/>
-			<string key="concept:name" value="Analyze Defect"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-22T19:10:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS2"/>
-			<date key="time:timestamp" value="1970-01-22T19:22:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester4"/>
-			<date key="time:timestamp" value="1970-01-22T19:22:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="1"/>
-			<string key="org:resource" value="Tester4"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T19:28:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="false"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T19:38:00.000+01:00"/>
-			<string key="concept:name" value="Restart Repair"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T19:38:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="org:resource" value="SolverS3"/>
-			<date key="time:timestamp" value="1970-01-22T19:48:00.000+01:00"/>
-			<string key="concept:name" value="Repair (Simple)"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="org:resource" value="Tester2"/>
-			<date key="time:timestamp" value="1970-01-22T19:48:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="lifecycle:transition" value="start"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="Tester2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T19:55:00.000+01:00"/>
-			<string key="concept:name" value="Test Repair"/>
-			<string key="defectFixed" value="true"/>
-		</event>
-		<event>
-			<string key="org:resource" value="System"/>
-			<date key="time:timestamp" value="1970-01-22T19:56:00.000+01:00"/>
-			<string key="concept:name" value="Inform User"/>
-			<string key="lifecycle:transition" value="complete"/>
-		</event>
-		<event>
-			<string key="numberRepairs" value="2"/>
-			<string key="org:resource" value="System"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="1970-01-22T20:00:00.000+01:00"/>
 			<string key="concept:name" value="Archive Repair"/>
 			<string key="defectFixed" value="true"/>
 		</event>
