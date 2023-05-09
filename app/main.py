@@ -7,42 +7,36 @@ import os
 
 app = FastAPI()
 
-photo_pathAct = ""
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="UI-template",auto_reload=True)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse("main.html", {"request": request})
+    
+    return templates.TemplateResponse("main.html", {"request": request,})
 
-@app.websocket("/ws")
-async def get_stream(websocket: WebSocket):
-    await websocket.accept()
-    try:
-        while True:
-            await websocket.send_text(get_start_activities("app/repairExample.xes"))
-    except WebSocketDisconnect:
-        print("Client disconnected") 
 
 @app.post("/file/downloadAlpha")
 async def upload_alpha(request: Request, file: UploadFile = File(...)):
+    import shutil
     try:
         contents = file.file.read()
-        global photo_pathAct
-        photo_pathAct = os.path.join("buffer","alpha_"+file.filename)
-        with open(photo_pathAct, "wb") as f:
+        photo_path = os.path.join("buffer","alpha_"+file.filename)
+        with open(photo_path, "wb") as f:
             f.write(contents)
+        
+        StartAct = get_start_activities(photo_path)
+        EndAct = get_end_activities(photo_path)
+        GetMSD = get_minimum_self_dist(photo_path)
+        alpha_model(photo_path)
 
-        model = alpha_model(photo_pathAct)
-    
     except Exception:
         return {"message": "There was an error uploading the file"}
     finally:
         file.file.close()
-        # os.remove(photo_pathAct)
+        os.remove(photo_path)
     
-    return templates.TemplateResponse("main.html", {"request": request, "MyModel":model})
+    return templates.TemplateResponse("main.html", {"request": request,"StartAct":StartAct,"EndAct":EndAct,"GetMSD":GetMSD})
 
 @app.post("/file/downloadInduct")
 async def upload_inductive(request: Request, file: UploadFile):
@@ -52,14 +46,17 @@ async def upload_inductive(request: Request, file: UploadFile):
         with open(photo_path, "wb") as f:
             f.write(contents)
 
-        modelInduct = inductive_model(photo_path)
+        StartActInd = get_start_activities(photo_path)
+        EndActInd = get_end_activities(photo_path)
+        GetMSDInd = get_minimum_self_dist(photo_path)
+        inductive_model(photo_path)
     except Exception:
         return {"message": "There was an error uploading the file"}
     finally:
         file.file.close()
         os.remove(photo_path)
     
-    return templates.TemplateResponse("main.html", {"request": request,  "MymodelInduct": modelInduct})
+    return templates.TemplateResponse("main.html", {"request": request,  "StartActInd":StartActInd,"EndActInd":EndActInd,"GetMSD":GetMSDInd})
 
 @app.post("/file/downloadHeuristics")
 async def upload_heuristics(request: Request, file: UploadFile):
@@ -69,14 +66,17 @@ async def upload_heuristics(request: Request, file: UploadFile):
         with open(photo_path, "wb") as f:
             f.write(contents)
 
-        modelHeur = heuristics_model(photo_path)
+        StartActHeu = get_start_activities(photo_path)
+        EndActHeu = get_end_activities(photo_path)
+        GetMSDHeu = get_minimum_self_dist(photo_path)
+        heuristics_model(photo_path)
     except Exception:
         return {"message": "There was an error uploading the file"}
     finally:
         file.file.close()
         os.remove(photo_path)
     
-    return templates.TemplateResponse("main.html", {"request": request,  "MymodelHeur": modelHeur})
+    return templates.TemplateResponse("main.html", {"request": request,  "StartActHeu":StartActHeu,"EndActHeu":EndActHeu,"GetMSDHeu":GetMSDHeu})
 
 @app.post("/file/downloadConformance")
 async def upload_conformance(request: Request, file: UploadFile = File(...)):
