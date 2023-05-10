@@ -56,7 +56,7 @@ async def upload_inductive(request: Request, file: UploadFile):
         file.file.close()
         os.remove(photo_path)
     
-    return templates.TemplateResponse("main.html", {"request": request,  "StartActInd":StartActInd,"EndActInd":EndActInd,"GetMSD":GetMSDInd})
+    return templates.TemplateResponse("main.html", {"request": request,  "StartActInd":StartActInd,"EndActInd":EndActInd,"GetMSDInd":GetMSDInd})
 
 @app.post("/file/downloadHeuristics")
 async def upload_heuristics(request: Request, file: UploadFile):
